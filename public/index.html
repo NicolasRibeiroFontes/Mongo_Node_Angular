@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="node">
+<head lang="pt-BR">
+    <meta charset="UTF-8">
+    <title>Mongo Node Angular</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/angular.js"></script>
+    <script src="js/metodos.js"></script>
+</head>
+<body ng-controller="objetos">
+
+<div ng-controller="pessoa">
+    <div class="col-md-1"></div>
+
+    <div class="col-md-2">
+        <h3 align="center">Cadastrar</h3>
+        <hr/>
+        <h4>Nome: <input type="text" placeholder="Seu Nome.." class="form-control" ng-model="PESSOA.nome"></h4>
+        <h4>Sobrenome: <input type="text" placeholder="Seu Nome.." class="form-control" ng-model="PESSOA.sobrenome">
+        </h4>
+        <input type="submit" value="CADASTRAR" class="btn" ng-click="salvar()">
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-4" ng-init="retornarTodas()">
+        <h3 align="center">Listar</h3>
+        <hr/>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th align="center">Nome</th>
+                    <th>Sobrenome</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="p in pessoas" align="left">
+                    <td>{{p.nome}}</td>
+                    <td>{{p.sobrenome}}</td>
+                    <td><a ng-click="retornarUma(p)">Selecionar</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-2">
+        <h3>Pessoa Selecionada</h3>
+        <hr/>
+        <h4>Nome: {{pessoa.nome}}</h4>
+        <h4>Sobrenome: {{pessoa.sobrenome}}</h4>
+    </div>
+
+
+
+    <div class="col-md-1"></div>
+</div>
+
+</body>
+</html>
