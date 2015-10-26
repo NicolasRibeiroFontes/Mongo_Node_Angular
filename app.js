@@ -27,6 +27,7 @@ app.use('/users', users);
 
 ///////////ROTAS
 app.post('/cadastrar',pessoa.cadastrar);
+app.post('/cadastrarEndereco',pessoa.cadastrarEndereco);
 app.get('/retornar',pessoa.retornar);
 //////
 

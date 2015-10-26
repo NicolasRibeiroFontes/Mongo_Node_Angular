@@ -18,6 +18,9 @@
         <h4>Nome: <input type="text" placeholder="Seu Nome.." class="form-control" ng-model="PESSOA.nome"></h4>
         <h4>Sobrenome: <input type="text" placeholder="Seu Nome.." class="form-control" ng-model="PESSOA.sobrenome">
         </h4>
+        <h1>-----</h1>
+        <h4>DDD: <input type="text"  class="form-control" ng-model="TELEFONE.ddd"></h4>
+        <h4>Tel: <input type="text"  class="form-control" ng-model="TELEFONE.numero"></h4>
         <input type="submit" value="CADASTRAR" class="btn" ng-click="salvar()">
     </div>
     <div class="col-md-1"></div>
@@ -48,6 +51,12 @@
         <hr/>
         <h4>Nome: {{pessoa.nome}}</h4>
         <h4>Sobrenome: {{pessoa.sobrenome}}</h4>
+        <hr/>
+        <div>
+            <h4>RUA: <input type="text"  class="form-control" ng-model="ENDERECO.rua"></h4>
+            <h4>BAIRRO: <input type="text"  class="form-control" ng-model="ENDERECO.bairro"></h4>
+            <input type="submit" value="CADASTRAR ENDERECO" class="btn" ng-click="salvarEndereco()">
+        </div>
     </div>
 
 

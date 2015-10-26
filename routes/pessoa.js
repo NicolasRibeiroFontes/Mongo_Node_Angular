@@ -6,6 +6,11 @@ exports.cadastrar = function(req,res){
         res.send('ok');
     })
 };
+exports.cadastrarEndereco = function(req,res){
+    db.collection('endereco').insert(req.body, function(err,ok){
+        res.send('ok');
+    })
+};
 
 exports.retornar = function(req, res){
     db.collection('pessoa').find().toArray(function(err,pessoas){
